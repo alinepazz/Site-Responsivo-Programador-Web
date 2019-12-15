@@ -1,0 +1,146 @@
+/*considerando o global*/
+
+@import url('https://fonts.googleapis.com/css?family=Chilanka|Manjari&display=swap');
+body {
+    margin: auto;/*tirar a margem que tem naturalmente ao redor do conteúdo*/
+    font-family: 'Manjari', sans-serif;/*google fonts, varias opções de fontes*/
+}
+h2{
+    font-family: 'Manjari', sans-serif;
+}
+
+img, video, embed, iframe, object{
+   max-width: 100%;/*max modifica o tamanho da imagem, deixando no máximo 100% que é o tamanho da tela, ajudando a deixar todos os conteudos linkados responsivos, outo elemento importante para deixar uma página responsivo*/
+    
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: #CC0003;
+    text-align: center;
+    text-transform:lowercase;/*modifica para maiusculo ou minisculo*/
+    font-weight: bold;/*para colocar o negrito*/
+}
+nav a{
+    text-decoration: none; /* modificar o link, none=tirar o underline*/
+    color: #fff;
+    /*padding: 10px 60px;quando quero alterar o preenchimento entre os elementos*/
+    display: block;/*deixar o conteudo em blocos ou posso utilizar o line-height para dar espaço entre os elementos*/
+    line-height: 40px;/*espaçamento entre os elementos*/
+
+}
+nav a:hover{/*faz algo quando o mouse passa sobre o elemento*/
+    color: #dd5858;
+}
+footer{
+    text-align: center;
+    background-color: #af0002;
+    color: #ffb5b6;/*color é a cor do conteúdo*/
+    clear: both;
+    line-height: 30px;
+}
+form label {
+    display: block;
+    width: 20%;
+    float: left;
+    border-bottom: : 1px solid #300040;
+    font-weight: bold;
+
+}
+form input {
+    border: solid 1px #300040;
+    border-radius: 5px;
+    height: 30px;
+    width: 70%;
+}
+form textarea{/**/
+    border: solid 1px #300040;/*formataçao da borda*/
+    border-radius: 5px;/*arredonda a borda*/
+    box-shadow: rgba(0,0,0,.3) 1px 1px 2px 1px;/*sombra do elemento, cor,(a) que representa a transparência, o promeiro elemento depois da cor é o deslocamento da sombra horizontal, o segundo numero é o deslocamento vertical o terceiro é suavização da sombra. o ultimo tamanho da sombra*/
+    height: 60px;
+    width: 70%;
+}
+form input[type=submit] {
+    border: 2px solid #670130;
+    background: rgb(149, 8, 9);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    width: 92%;
+    margin-bottom: 20px;
+}
+/*Criar um css só para dispositivos com tela com resolução ate 601px-TABLET*/
+/*tudo que fizer aqui so vai funcionar se a tela for menor que 601*/
+@media only screen and (max-width:601px){
+    
+    nav{
+        background: #ea5f35;
+    }
+}
+ /*dispositos com resolução ate 601px e 1100px*/
+@media only screen and (min-width:601px) and (max-width:1100px){
+  
+     
+    nav li{
+        display: inline-block;
+    }
+    nav a{
+        padding: 10px 60px;
+    }
+    #col1{
+        width: 49%;
+        float: left;
+    }
+    #col2{
+        width: 49%;
+        float: right;
+    }
+    #col3{
+/*display: none; quando quero que tal conteudo não apareça em uma determinada resolução*/
+    }
+    
+    #form {
+        float: left;
+        width: 49%;
+    }
+    #mapa {
+        float: right;
+        width: 49%;
+    }
+    
+}
+/*Para dispositivos com tela superior a 1100px DESKTOP*/
+@media only screen and (min-width:1101px){
+    body {
+        max-width: 2000px;
+    }
+    nav li{
+        display: inline-block;
+        
+    }
+    nav a{
+        padding: 10px 60px;
+    }
+    #col1, #col2, #col3 {
+        width: 33%;
+        float: left;
+        margin-right: 0.5%;
+    }
+    #col3{
+        margin-right: 0;
+    }
+    
+    #mapa {
+        width: 49%;
+        float: right;
+    }
+    
+     #form {
+        width: 49%;
+        float: left;
+    }
+   
+}

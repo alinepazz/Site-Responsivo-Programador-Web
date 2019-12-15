@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Fale com a equipe Responsivando</title><!-- o ideal é 60 caracteres-->
+    
+    <!-- Sites responsivos precisam dessa tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--estou pedindo para o navegador não dar zoom, um dos elementos para deixar a página resposivo-->
+    
+    <!-- META TAG- descrição e palavras chave. Deve ser única em cada página-->
+    <meta name="description" content="Entre em contato conosco."><!-- importante fazer uma boa descrição do site, é diferente em cada página-->
+    <meta name="Keywords" content="atendimento responsivando, suporte"> <!-- Aqui uso as palavras chaves desta pagina, não do site todo, usar o minino de palavras chaves necessarias-->
+    
+    <!--INSERINDO ÍCONE NOS FAVORITOS-->
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    
+    <!-- Anexando CSS externo-->
+    <link href="estilo.css" rel="stylesheet"> 
+    
+    
+</head>
+
+<body>
+ <nav>
+     <ul>
+         <li><a href="index.html" title="Página inicial">Inicial</a></li><li><a href="galeria.html" title="Galeria de imagens">Galeria</a></li><li><a href="multimidia.html" title="Multimídia">Multimídia</a></li><li><a href="contato.html" title="Fale conoscos">Contato</a></li>
+     
+         
+     </ul>   
+ </nav>
+    
+    <main>
+        <h1>Entre em contato</h1><!--strong para deixar negrito--><!--a proxima pagina depois do index so vai ser alterado a meta name description o title o keywords e trocar o nav ate o footer(deixando o footer)-->
+        <p>Entre em contato conosco através do telefone: 11 2345-6789, Whatspp: 11 98765-4321 ou preenchendo o formúlario abaixo. Nossa equipe está pronta para lhe atender.</p>
+        
+        <div id="form">
+           <form method="post" action="envia.php"><!-- esconde os dados da url--><!--get mostra os dados na url--><!-- action- o que vai acontecer quando eu clicar no botão enviar ou entrar-->
+            <p>
+                 <label for="nome">Nome</label><!--recurso de acessibilidade, rotulo-->
+                 <input type="text" name="nome" id="nome" required placeholder="nome completo"><!-- placeholder texto sujestivo para auxiliar o usuário--><!-- required deixa o campo obrigatorio, se o usuario não preencher, não enviara--><!-- input é campo de entrada de dados, recepção de dados/ text é o estilo do conteúdo-->
+           </p>    
+           <p>
+               <label for="email">E-mail:</label>
+               <input type="email" name="email" id="email" required placeholder="e-mail">
+            </p>
+          <p>
+              
+              <label for="msg">Mensagem:</label>
+              <textarea name="msg" id="msg" placeholder="dúvidas, cr´ticas ou ameaças"></textarea><!-- textarea deixa o campo de texto maior-->
+          </p>       
+          <p>
+               
+               <label for="fone">Telefone:</label>
+               <input type="tel" name="fone" id="fone" placeholder="DDD + Fone">
+          </p>
+          <p>
+             <input type="submit" value="Envia aí" name="eniar" id="enviar"><!--botão escrito enviar--><!--value o texto que irá aparecer na botão-->  
+               
+          </p>       
+               
+           </form>
+            
+        </div>
+        <div id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.163571983095!2d-46.656940684871195!3d-23.56256806752232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8e65114ab%3A0x77a9bdfbd2f90d5b!2sAv.%20Paulista%2C%201374%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1568900670173!5m2!1spt-BR!2sbr" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div><!--entrar o site google maps incorporar o link-->    
+    </main>
+    
+    
+     <!--RODAPÉ-->
+    <footer>
+        <p>
+        Layout realizado utilizando Design Responsivo</p>
+    </footer>
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+
+
+</body>
+</html>
